@@ -1,8 +1,11 @@
+
 """
-EduMetrics — FastAPI application entry point.
+EduMetrics - FastAPI application entry point.
 """
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 from app.core.config import get_settings
 from app.api.v1.router import api_router
 
@@ -17,8 +20,12 @@ app = FastAPI(
     redoc_url=f"{settings.API_V1_PREFIX}/redoc",
 )
 
-# CORS
-allowed_origins = [o.strip() for o in settings.ALLOWED_ORIGINS.split(",")]
+# CORS configuration
+allowed_origins = [
+    origin.strip()
+    for origin in settings.ALLOWED_ORIGINS.split(",")
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
@@ -27,10 +34,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Routers
-app.include_router(api_router, prefix=settings.API_V1_PREFIX)
+# API v1 routes
+app.include_router(
+    api_router,
+    prefix=settings.API_V1_PREFIX,
+)
 
 
 @app.get("/", tags=["Root"])
 def root():
-    return {"message": f"Welcome to {settings.APP_NAME} API", "version": settings.APP_VERSION}
+    return {
+        "message": f"Welcome to {settings.APP_NAME} API",
+        "version": settings.APP_VERSION,
+    }

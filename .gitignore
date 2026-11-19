@@ -48,7 +48,7 @@ out/
 *.min.js.map
 
 # ---- ML artifacts ----
-models/
+/models/
 *.pkl
 *.joblib
 *.h5
