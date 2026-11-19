@@ -4,24 +4,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f7fa;
+  background-color: var(--color-bg-base);
 }
 
 .hero {
   text-align: center;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .app-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
   letter-spacing: -0.02em;
 }
 
 .app-subtitle {
-  font-size: 1.125rem;
-  color: #555e73;
-  font-weight: 400;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
 }
