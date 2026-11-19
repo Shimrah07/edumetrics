@@ -1,0 +1,27 @@
+/* EduMetrics — App styles */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+
+.app-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.app-subtitle {
+  font-size: 1.125rem;
+  color: #555e73;
+  font-weight: 400;
+}
